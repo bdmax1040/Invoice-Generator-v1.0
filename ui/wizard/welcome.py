@@ -4,9 +4,9 @@ import os
 import json
 
 class WelcomePage(QWidget):
-    def __init__(self, config, next_callback):
+    def __init__(self, config, go_to_next):
         super().__init__()
-        self.next_callback = next_callback
+        self.go_to_next = go_to_next
         self.setObjectName("content")
 
         self.config = config
@@ -21,13 +21,10 @@ class WelcomePage(QWidget):
 
         self.button1 = QPushButton("Get Started")
         self.button1.setObjectName("button1")
-        self.button1.clicked.connect(self.next_callback)
+        self.button1.clicked.connect(self.go_to_next)
 
         # Layout setup
         self.setup_layout()
-
-        # Animations
-        self.apply_animations()
 
     def setup_layout(self):
         layout = QVBoxLayout()
@@ -46,6 +43,3 @@ class WelcomePage(QWidget):
         layout.addSpacing(100)
 
         self.setLayout(layout)
-
-    def apply_animations(self):
-        pass  # Animations temporarily removed

@@ -5,6 +5,7 @@ import json
 import darkdetect
 
 from ui.wizard.welcome import WelcomePage
+from ui.wizard.user_info import UserInfoPage
 
 
 def darken_color(hex_color, factor=0.8):
@@ -41,6 +42,8 @@ class WizardWindow(QWidget):
         # Load pages
         self.welcome_page = WelcomePage(self.config, self.go_to_next_page)
         self.stack.addWidget(self.welcome_page)
+        self.user_info_page = UserInfoPage(self.config, self.go_to_next_page)
+        self.stack.addWidget(self.user_info_page)
         self.stack.setCurrentWidget(self.welcome_page)
 
         # Timer to monitor system theme changes
@@ -86,8 +89,7 @@ class WizardWindow(QWidget):
             self.setup_styles()
 
     def go_to_next_page(self):
-        # Placeholder for page switching logic
-        pass
+        self.stack.setCurrentWidget(self.user_info_page)
 
     def center_on_screen(self):
         screen = QApplication.primaryScreen()
