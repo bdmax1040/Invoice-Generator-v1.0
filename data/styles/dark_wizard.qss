@@ -50,7 +50,7 @@ QPushButton#selectLogoButton {
     background-color: #333333;
     border-radius: 4px;
     color: #eeeeee;
-    border: 1px solid #ccc;
+    border: 1px solid #525252;
 }
 
 QPushButton#selectLogoButton:hover {
@@ -61,7 +61,7 @@ QLineEdit#inputField {
     font-size: 14px;
     padding: 10px;
     font-family: Inter;
-    border: 1px solid #ccc;
+    border: 1px solid #525252;
     border-radius: 4px;
     background-color: #333333;
     color: #eeeeee;
