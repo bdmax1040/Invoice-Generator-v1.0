@@ -6,6 +6,7 @@ import darkdetect
 
 from ui.wizard.welcome import WelcomePage
 from ui.wizard.user_info import UserInfoPage
+from ui.wizard.preferences import PreferencesPage
 
 
 def darken_color(hex_color, factor=0.8):
@@ -44,6 +45,8 @@ class WizardWindow(QWidget):
         self.stack.addWidget(self.welcome_page)
         self.user_info_page = UserInfoPage(self.config, self.go_to_next_page)
         self.stack.addWidget(self.user_info_page)
+        self.preferences_page = PreferencesPage(self.config, self.go_to_next_page, self.go_to_previous_page)
+        self.stack.addWidget(self.preferences_page)
         self.stack.setCurrentWidget(self.welcome_page)
 
         # Timer to monitor system theme changes
@@ -89,7 +92,14 @@ class WizardWindow(QWidget):
             self.setup_styles()
 
     def go_to_next_page(self):
-        self.stack.setCurrentWidget(self.user_info_page)
+        current_index = self.stack.currentIndex()
+        if current_index + 1 < self.stack.count():
+            self.stack.setCurrentIndex(current_index + 1)
+
+    def go_to_previous_page(self):
+        current_index = self.stack.currentIndex()
+        if current_index > 0:
+            self.stack.setCurrentIndex(current_index - 1)
 
     def center_on_screen(self):
         screen = QApplication.primaryScreen()
