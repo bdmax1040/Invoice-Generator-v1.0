@@ -1,0 +1,32 @@
+QWidget#content {
+    background-color: #272727;
+    border: 1px solid #525252;
+    border-radius: 10px;
+}
+
+QPushButton#button1 {
+    font-size: 16px;
+    padding: 12px 24px;
+    font-family: Inter;
+    font-weight: bold;
+    color: #eeeeee;
+    background-color: {{accent}};
+    border-radius: 5px;
+}
+
+QPushButton:hover#button1 {
+    background-color: {{accent_hover}};
+}
+
+QLabel#title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Inter;
+    color: #ffffffff
+}
+
+QLabel#text1 {
+    font-size: 16px;
+    font-family: Inter;
+    color: #EEEEEE;
+}
