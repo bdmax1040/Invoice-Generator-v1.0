@@ -3,9 +3,9 @@
         "completed": false
     },
     "user_info": {
-        "full_name": "",
-        "company_name": "",
-        "email_address": ""
+        "full_name": "Ben Maxwell",
+        "company_name": "Quantis Audio",
+        "email": "ben@quantisaudio.com"
     },
     "banking": {
         "account_name": "",

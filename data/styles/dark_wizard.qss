@@ -1,3 +1,7 @@
+/**/
+/* Welcome Page */
+/**/
+
 QWidget#content {
     background-color: #272727;
     border: 1px solid #525252;
@@ -29,4 +33,55 @@ QLabel#text1 {
     font-size: 16px;
     font-family: Inter;
     color: #EEEEEE;
+}
+
+
+
+
+
+/**/
+/* User Info Page */
+/**/
+
+QPushButton#selectLogoButton {
+    font-size: 14px;
+    padding: 10px 18px;
+    font-family: Inter;
+    background-color: #333333;
+    border-radius: 4px;
+    color: #eeeeee;
+    border: 1px solid #ccc;
+}
+
+QPushButton#selectLogoButton:hover {
+    background-color: #222222;
+}
+
+QLineEdit#inputField {
+    font-size: 14px;
+    padding: 10px;
+    font-family: Inter;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #eeeeee;
+}
+
+QPushButton#wizardNextButton {
+    font-size: 16px;
+    padding: 12px 24px;
+    font-family: Inter;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: {{accent}};
+    border-radius: 5px;
+}
+
+QPushButton:hover#wizardNextButton {
+    background-color: {{accent_hover}};
+}
+
+QLabel#logoPreview {
+    border-radius: 50px;
+    background-color: #f9f9f9;
 }
