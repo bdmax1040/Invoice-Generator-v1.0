@@ -41,7 +41,7 @@ text1.setObjectName("text1")
 
 with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "config.json"), "r") as f:
     settings = json.load(f)
-accent_colour = settings.get("theme", {}).get("accent")
+accent_colour = settings.get("theme", {}).get("accent_colour", "#FF3E3E")
 accent_hover = darken_color(accent_colour)
 background_colour = settings.get("theme", {}).get("background", "#ffffff")
 border_colour = settings.get("theme", {}).get("border", "#cccccc")
