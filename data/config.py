@@ -2,14 +2,9 @@ import os
 import json
 from pathlib import Path
 
-# Platform-safe config directory (recommended for deployed apps)
 def get_config_dir():
-    if os.name == 'nt':
-        return Path(os.getenv('APPDATA')) / "InvoiceGenerator"
-    elif os.name == 'posix':
-        return Path.home() / ".config" / "InvoiceGenerator"
-    else:
-        return Path.home() / ".invoice_generator"
+    # Always use the local ./data directory within the project
+    return Path(__file__).parent
 
 CONFIG_DIR = get_config_dir()
 CONFIG_PATH = CONFIG_DIR / "config.json"
@@ -44,7 +39,7 @@ DEFAULT_CONFIG = {
         "save_location": ""
     },
     "theme": {
-        "accent": "#FF3E3E"
+        "accent_colour": "#FF3E3E"
     }
 }
 

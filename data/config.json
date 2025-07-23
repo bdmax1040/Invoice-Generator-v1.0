@@ -1,5 +1,32 @@
 {
-  "theme": {
-    "accent": "#FF3E3E"
-  }
+    "setup": {
+        "completed": false
+    },
+    "user_info": {
+        "full_name": "",
+        "company_name": "",
+        "email_address": ""
+    },
+    "banking": {
+        "account_name": "",
+        "sort_code": "",
+        "account_number": "",
+        "currency": "\u00a3"
+    },
+    "mileage": {
+        "vehicle_mpg": "",
+        "fuel_price": "",
+        "default_45p_per_mile": false
+    },
+    "preferences": {
+        "due_date_offset_days": 14,
+        "my_email_bcc": true,
+        "company_name_in_signature": true
+    },
+    "pdf": {
+        "save_location": ""
+    },
+    "theme": {
+        "accent_colour": "#FF3E3E"
+    }
 }
